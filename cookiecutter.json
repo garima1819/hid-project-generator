@@ -3,6 +3,7 @@
     "project_slug": "{{ cookiecutter.project_name.replace('_', ' ').title().replace(' ', '') }}",
     "runtime": ["java11", "java8.al2", "java8"],
     "dependency_manager": ["Maven", "Gradle"],
-    "projectdirName": "mydir",
+    "projectdir_name": "myDir",
+    "resource_name": "My Resource",
     "_templates_repo": "/Users/krishnakumar9/IdeaProjects/hidcookiecutter"
 }

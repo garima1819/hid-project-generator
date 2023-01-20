@@ -14,7 +14,8 @@ def main():
 
     project_name = "{{ cookiecutter.project_name }}"
     project_slug = "{{ cookiecutter.project_slug }}"
-    projectdirName = "{{cookiecutter.projectdirName}}"
+    projectdir_name = "{{cookiecutter.projectdir_name}}"
+    resource_name = "{{cookiecutter.resource_name}}"
 
     templates_repo = "{{ cookiecutter._templates_repo }}"
     template_dir = os.path.join("templates", "{{ cookiecutter.runtime }}", "cookiecutter-aws-sam-hello-powertools-java-{{ cookiecutter.dependency_manager.lower() }}")
@@ -27,7 +28,8 @@ def main():
                     extra_context={
                                     "project_name": project_name,
                                     "project_slug": project_slug,
-                                    "projectdirName": projectdirName
+                                    "projectdir_name": projectdir_name,
+                                    "resource_name": resource_name
                                   }
                 )
 
