@@ -1,0 +1,6 @@
+{
+  "project_name": "My Project",
+  "project_slug": "{{ cookiecutter.project_name.replace('_', ' ').title().replace(' ', '') }}",
+  "projectdir_name": "mydir",
+  "resource_name": "My Resource"
+}

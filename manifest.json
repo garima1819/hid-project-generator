@@ -1,15 +1,15 @@
 {
   "java8": [
     {
-      "directory": "templates/java8/cookiecutter-aws-sam-hello-powertools-java-gradle",
-      "displayName": "Hello World Example with Lambda Powertools: Gradle",
+      "directory": "templates/java8/hid-cookiecutter-gradle",
+      "displayName": "Simple Project template using hid-cookiecutter: Gradle",
       "dependencyManager": "gradle",
       "appTemplate": "powertools-hello-world",
       "javaVersion": "1.8"
     },
     {
-      "directory": "templates/java8/cookiecutter-aws-sam-hello-powertools-java-maven",
-      "displayName": "Hello World Example with Lambda Powertools: Maven",
+      "directory": "templates/java8/hid-cookiecutter-maven",
+      "displayName": "Simple Project template using hid-cookiecutter: Maven",
       "dependencyManager": "maven",
       "appTemplate": "powertools-hello-world",
       "javaVersion": "1.8"
@@ -17,15 +17,15 @@
   ],
   "java8.al2": [
     {
-      "directory": "templates/java8.al2/cookiecutter-aws-sam-hello-powertools-java-gradle",
-      "displayName": "Hello World Example with Lambda Powertools: Gradle",
+      "directory": "templates/java8.al2/hid-cookiecutter-gradle",
+      "displayName": "Simple Project template using hid-cookiecutter: Gradle",
       "dependencyManager": "gradle",
       "appTemplate": "powertools-hello-world",
       "javaVersion": "1.8"
     },
     {
-      "directory": "templates/java8.al2/cookiecutter-aws-sam-hello-powertools-java-maven",
-      "displayName": "Hello World Example with Lambda Powertools: Maven",
+      "directory": "templates/java8.al2/hid-cookiecutter-maven",
+      "displayName": "Simple Project template using hid-cookiecutter: Maven",
       "dependencyManager": "maven",
       "appTemplate": "powertools-hello-world",
       "javaVersion": "1.8"
@@ -33,15 +33,15 @@
   ],
   "java11": [
     {
-      "directory": "templates/java11/cookiecutter-aws-sam-hello-powertools-java-gradle",
-      "displayName": "Hello World Example with Lambda Powertools: Gradle",
+      "directory": "templates/java11/hid-cookiecutter-gradle",
+      "displayName": "Simple Project template using hid-cookiecutter: Gradle",
       "dependencyManager": "gradle",
       "appTemplate": "powertools-hello-world",
       "javaVersion": "11"
     },
     {
-      "directory": "templates/java11/cookiecutter-aws-sam-hello-powertools-java-maven",
-      "displayName": "Hello World Example with Lambda Powertools: Maven",
+      "directory": "templates/java11/hid-cookiecutter-maven",
+      "displayName": "Simple Project template using hid-cookiecutter: Maven",
       "dependencyManager": "maven",
       "appTemplate": "powertools-hello-world",
       "javaVersion": "11"
