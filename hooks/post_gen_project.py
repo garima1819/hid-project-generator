@@ -16,7 +16,7 @@ def main():
     project_slug = "{{ cookiecutter.project_slug }}"
 
     resource_name = "{{cookiecutter.resource_name}}"
-    resources = ["User", "Customer", "Order"]
+    resources = ["user", "customer", "order"]
 
     templates_repo = "{{ cookiecutter._templates_repo }}"
     template_dir = os.path.join("templates")
@@ -30,7 +30,7 @@ def main():
                         extra_context={
                                         "project_name": project_name,
                                         "project_slug": project_slug,
-                                        "resource_name": resource
+                                        "resource_name": resource.capitalize()
                                       }
                     )
 
