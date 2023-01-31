@@ -1,6 +1,7 @@
 {
     "project_name": "MyProject",
     "project_slug": "{{ cookiecutter.project_name.replace('_', ' ').title().replace(' ', '') }}",
+    "project_description": "Description",
     "resource_name": "MyResource",
-    "_templates_repo": "/Users/divrathore/Downloads/hid-project-generator"
+    "_templates_repo": "/Users/vpetwal/HashedInAssignments/hid-project-generator"
 }

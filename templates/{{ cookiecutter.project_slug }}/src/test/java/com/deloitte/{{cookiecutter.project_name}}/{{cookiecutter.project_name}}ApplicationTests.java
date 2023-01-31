@@ -1,10 +1,10 @@
-package com.deloitte.{{cookiecutter.resource_name}};
+package com.deloitte.{{cookiecutter.project_name}};
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class {{cookiecutter.resource_name}}Tests {
+class {{cookiecutter.project_name}}ApplicationTests {
 
 	@Test
 	void contextLoads() {

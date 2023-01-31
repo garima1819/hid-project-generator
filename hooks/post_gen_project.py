@@ -14,14 +14,16 @@ def main():
 
     project_name = "{{ cookiecutter.project_name }}"
     project_slug = "{{ cookiecutter.project_slug }}"
+    project_description = "{{cookiecutter.project_description}}"
 
     resource_name = "{{cookiecutter.resource_name}}"
-    resources = ["user", "customer", "order"]
+    resources = ["product", "customer", "orders"]
 
     templates_repo = "{{ cookiecutter._templates_repo }}"
     template_dir = os.path.join("templates")
 
-    for resource in resources :
+    for resource in resources:
+        print(resource)
         cookiecutter(   templates_repo,
                         directory=template_dir,
                         no_input=True,
@@ -30,9 +32,11 @@ def main():
                         extra_context={
                                         "project_name": project_name,
                                         "project_slug": project_slug,
+                                        "project_description":project_description,
                                         "resource_name": resource.capitalize()
                                       }
                     )
+        print(resource)
 
     print(SUCCESS +
           "Project initialized successfully! You can now jump to {} folder".
