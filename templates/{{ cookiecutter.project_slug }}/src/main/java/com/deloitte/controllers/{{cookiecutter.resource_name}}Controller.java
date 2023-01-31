@@ -3,6 +3,7 @@ package com.deloitte.controllers;
 import com.deloitte.domain.{{cookiecutter.resource_name}};
 import com.deloitte.service.{{cookiecutter.resource_name}}Service;
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
