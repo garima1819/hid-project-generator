@@ -10,7 +10,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="{{cookiecutter.resource_name}}")
+@Table(name = "{{cookiecutter.resource_name}}")
 public class {{cookiecutter.resource_name}} {
 
 // define fields
