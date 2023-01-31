@@ -1,9 +1,8 @@
 package com.deloitte.service.serviceImpl;
 
 import com.deloitte.domain.{{cookiecutter.resource_name}};
-import com.deloitte.service.{{cookiecutter.resource_name}}Repository;
+import com.deloitte.repository.{{cookiecutter.resource_name}}Repository;
 import com.deloitte.service.{{cookiecutter.resource_name}}Service;
-import java.util.Collection;
 import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,7 @@ public class {{cookiecutter.resource_name}}ServiceImpl implements {{cookiecutter
 
     @Override
     public {{cookiecutter.resource_name}} save{{cookiecutter.resource_name}}({{cookiecutter.resource_name}} {{cookiecutter.resource_name|lower}}) {
-        return {{cookiecutter.resource_name}}Repository.save({{cookiecutter.resource_name|lower}});
+        return {{cookiecutter.resource_name|lower}}Repository.save({{cookiecutter.resource_name|lower}});
     }
 
     @Override
@@ -32,7 +31,7 @@ public class {{cookiecutter.resource_name}}ServiceImpl implements {{cookiecutter
     }
 
     @Override
-    public Collection<{{cookiecutter.resource_name}}>get{{cookiecutter.resource_name}}s() {
+    public List<{{cookiecutter.resource_name}}>get{{cookiecutter.resource_name}}s() {
         return {{cookiecutter.resource_name|lower}}Repository.findAll();
     }
 
