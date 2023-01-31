@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class {{cookiecutter.resource_name}}Controller {
 
-    private static final Logger log = LoggerFactory.getLogger({{cookiecutter.project_slug}}Controller.class);
+    private static final Logger log = LoggerFactory.getLogger({{cookiecutter.resource_name}}Controller.class);
 
     @Autowired
     private {{cookiecutter.resource_name}}Service {{cookiecutter.resource_name|lower}}Service;

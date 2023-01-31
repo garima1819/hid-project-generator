@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Service
 public class {{cookiecutter.resource_name}}ServiceImpl implements {{cookiecutter.resource_name}}Service {
 
-    private static final Logger log = LoggerFactory.getLogger({{cookiecutter.project_slug}}ServiceImpl.class);
+    private static final Logger log = LoggerFactory.getLogger({{cookiecutter.resource_name}}ServiceImpl.class);
 
     @Autowired
     {{cookiecutter.resource_name}}Repository {{cookiecutter.resource_name|lower}}Repository;
