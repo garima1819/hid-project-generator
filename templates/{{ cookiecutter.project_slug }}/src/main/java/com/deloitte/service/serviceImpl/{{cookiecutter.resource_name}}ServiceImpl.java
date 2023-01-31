@@ -1,5 +1,7 @@
 package com.deloitte.service.serviceImpl;
 
+import com.deloitte.domain.{{cookiecutter.resource_name}};
+import com.deloitte.service.{{cookiecutter.resource_name}}Repository;
 import com.deloitte.service.{{cookiecutter.resource_name}}Service;
 import java.util.Collection;
 import java.util.List;

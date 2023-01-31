@@ -1,5 +1,6 @@
 package com.deloitte.service;
 
+import com.deloitte.domain.{{cookiecutter.resource_name}};
 import java.util.List;
 
 public interface {{cookiecutter.resource_name}}Service {
