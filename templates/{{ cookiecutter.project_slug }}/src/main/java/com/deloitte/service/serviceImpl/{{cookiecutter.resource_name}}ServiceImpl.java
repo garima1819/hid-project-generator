@@ -4,11 +4,16 @@ import com.deloitte.domain.{{cookiecutter.resource_name}};
 import com.deloitte.repository.{{cookiecutter.resource_name}}Repository;
 import com.deloitte.service.{{cookiecutter.resource_name}}Service;
 import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class {{cookiecutter.resource_name}}ServiceImpl implements {{cookiecutter.resource_name}}Service {
+
+    private static final Logger log = LoggerFactory.getLogger({{cookiecutter.project_slug}}ServiceImpl.class);
 
     @Autowired
     {{cookiecutter.resource_name}}Repository {{cookiecutter.resource_name|lower}}Repository;
@@ -19,8 +24,8 @@ public class {{cookiecutter.resource_name}}ServiceImpl implements {{cookiecutter
     }
 
     @Override
-    public {{cookiecutter.resource_name}} update{{cookiecutter.resource_name}}(Long id,{{cookiecutter.resource_name}} {{cookiecutter.resource_name|lower}}) {
-        {{cookiecutter.resource_name}} {{cookiecutter.resource_name|lower}}Obj={{cookiecutter.resource_name|lower}}Repository.findById(id).get();
+    public {{cookiecutter.resource_name}} update{{cookiecutter.resource_name}}(Long id, {{cookiecutter.resource_name}} {{cookiecutter.resource_name|lower}}) {
+        {{cookiecutter.resource_name}} {{cookiecutter.resource_name|lower}}Obj = {{cookiecutter.resource_name|lower}}Repository.findById(id).get();
         //update the required fields
         return {{cookiecutter.resource_name|lower}}Repository.save({{cookiecutter.resource_name|lower}}Obj);
     }
