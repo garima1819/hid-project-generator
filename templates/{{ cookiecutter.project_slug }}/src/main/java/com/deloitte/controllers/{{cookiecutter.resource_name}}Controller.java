@@ -15,7 +15,7 @@ public class {{cookiecutter.resource_name}}Controller {
     }
 
     @GetMapping("/{{cookiecutter.resource_name}}s/{id}")
-    public List<{{cookiecutter.resource_name}}> get{{cookiecutter.resource_name}}ById(@PathVariable Long id) {
+    public {{cookiecutter.resource_name}} get{{cookiecutter.resource_name}}ById(@PathVariable Long id) {
         return service.get{{cookiecutter.resource_name}}ById(id);
     }
 
@@ -26,7 +26,7 @@ public class {{cookiecutter.resource_name}}Controller {
 
     @PutMapping("/{{cookiecutter.resource_name}}s/{id}")
     public {{cookiecutter.resource_name}} update{{cookiecutter.resource_name}}(@PathVariable Long id, @RequestBody {{cookiecutter.resource_name}} customer) {
-        return service.update{{cookiecutter.resource_name}}({{cookiecutter.resource_name}});
+        return service.update{{cookiecutter.resource_name}}(id, {{cookiecutter.resource_name}});
     }
 
     @DeleteMapping("/{{cookiecutter.resource_name}}s/{id}")
