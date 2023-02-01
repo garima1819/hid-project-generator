@@ -1,6 +1,6 @@
-package com.{{cookiecutter.project_name}}.repository;
+package com.deloitte.repository;
 
-import com.{{cookiecutter.project_name}}.domain.{{cookiecutter.resource_name}};
+import com.deloitte.domain.{{cookiecutter.resource_name}};
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

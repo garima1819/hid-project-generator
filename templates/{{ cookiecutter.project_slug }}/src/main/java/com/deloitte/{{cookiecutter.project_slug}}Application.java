@@ -1,4 +1,4 @@
-package com.{{cookiecutter.project_name}};
+package com.deloitte;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
