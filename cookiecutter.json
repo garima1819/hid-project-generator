@@ -2,5 +2,6 @@
     "project_name": "MyProject",
     "project_slug": "{{ cookiecutter.project_name.replace('_', ' ').title().replace(' ', '') }}",
     "resource_name": "MyResource",
+    "_read_from_file": false,
     "_templates_repo": "/Users/krishnakumar9/IdeaProjects/hid-project-generator"
 }
