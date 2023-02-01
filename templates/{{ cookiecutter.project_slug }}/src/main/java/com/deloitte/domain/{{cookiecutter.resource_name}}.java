@@ -9,6 +9,9 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "{{cookiecutter.resource_name}}")
 public class {{cookiecutter.resource_name}} {
