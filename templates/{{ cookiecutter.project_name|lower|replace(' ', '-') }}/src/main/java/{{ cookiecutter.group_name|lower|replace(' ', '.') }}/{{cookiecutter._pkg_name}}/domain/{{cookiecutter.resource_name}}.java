@@ -1,4 +1,4 @@
-package com.deloitte.{{cookiecutter.project_slug}}.domain;
+package com.deloitte.{{cookiecutter._pkg_name}}.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

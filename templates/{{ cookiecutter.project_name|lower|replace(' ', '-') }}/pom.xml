@@ -2,12 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.deloitte</groupId>
-    <artifactId>{{ cookiecutter.project_name.replace('_', ' ').lower().replace(' ', '-') }}</artifactId>
+    <groupId>{{ cookiecutter.group_name|lower|replace(' ', '.') }}</groupId>
+    <artifactId>{{ cookiecutter.project_name|lower|replace(' ', '-') }}</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <description>{{ cookiecutter.project_name.replace('_', ' ').lower().replace(' ', '-') }} Created from hid-project-generator.</description>
-    <name>{{ cookiecutter.project_name.replace('_', ' ').lower().replace(' ', '-') }}</name>
+    <description>{{ cookiecutter.project_name|lower|replace(' ', '-') }} Created from hid-project-generator.</description>
+    <name>{{ cookiecutter.project_name|lower|replace(' ', '-') }}</name>
 
     <dependencies>
         <dependency>
