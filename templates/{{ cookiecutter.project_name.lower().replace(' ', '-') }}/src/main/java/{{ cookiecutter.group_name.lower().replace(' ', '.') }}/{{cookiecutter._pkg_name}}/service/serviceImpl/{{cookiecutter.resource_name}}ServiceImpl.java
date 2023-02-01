@@ -4,6 +4,11 @@ import com.deloitte.{{cookiecutter._pkg_name}}.domain.{{cookiecutter.resource_na
 import com.deloitte.{{cookiecutter._pkg_name}}.repository.{{cookiecutter.resource_name}}Repository;
 import com.deloitte.{{cookiecutter._pkg_name}}.service.{{cookiecutter.resource_name}}Service;
 import lombok.extern.slf4j.Slf4j;
+import com.deloitte.{{cookiecutter._pkg_name}}.exception.ResourceNotFoundException;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -24,7 +29,8 @@ public class {{cookiecutter.resource_name}}ServiceImpl implements {{cookiecutter
 
     @Override
     public {{cookiecutter.resource_name}} update{{cookiecutter.resource_name}}(Long id, {{cookiecutter.resource_name}} {{cookiecutter.resource_name|lower}}) {
-        {{cookiecutter.resource_name}} {{cookiecutter.resource_name|lower}}Obj = {{cookiecutter.resource_name|lower}}Repository.findById(id).get();
+        {{cookiecutter.resource_name}} {{cookiecutter.resource_name|lower}}Obj = {{cookiecutter.resource_name|lower}}Repository.findById(id)
+                                       .orElseThrow(() -> new ResourceNotFoundException("{{cookiecutter.resource_name}} Not Found"));;
         //update the required fields
         return {{cookiecutter.resource_name|lower}}Repository.save({{cookiecutter.resource_name|lower}}Obj);
     }
@@ -41,6 +47,7 @@ public class {{cookiecutter.resource_name}}ServiceImpl implements {{cookiecutter
 
     @Override
     public {{cookiecutter.resource_name}} get{{cookiecutter.resource_name}}ById(Long id) {
-        return {{cookiecutter.resource_name|lower}}Repository.findById(id).get();
+        return {{cookiecutter.resource_name|lower}}Repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("{{cookiecutter.resource_name}} Not Found"));
     }
 }
