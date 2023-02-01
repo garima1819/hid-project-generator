@@ -1,7 +1,7 @@
-package com.deloitte.controller;
+package com.{{cookiecutter.project_name}}.controller;
 
-import com.deloitte.domain.{{cookiecutter.resource_name}};
-import com.deloitte.service.{{cookiecutter.resource_name}}Service;
+import com.{{cookiecutter.project_name}}.domain.{{cookiecutter.resource_name}};
+import com.{{cookiecutter.project_name}}.service.{{cookiecutter.resource_name}}Service;
 import java.util.List;
 
 import org.slf4j.Logger;

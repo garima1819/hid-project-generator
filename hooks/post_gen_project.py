@@ -4,6 +4,7 @@ from cookiecutter.main import cookiecutter
 import os
 import shutil
 import yaml
+import logging
 
 
 TERMINATOR = "\x1b[0m"
@@ -30,13 +31,13 @@ def main():
         else:
             resources_name = resources_name.split(" ")
     except FileNotFoundError as ex:
-        print("File not found")
+        logging.exception("File not found: %s", ex)
         raise ex
     except yaml.YAMLError as ex:
-        print("Error Reading file", yaml_file)
+        logging.exception("Error Reading file: %s", yaml_file)
         raise ex
     except Exception as ex:
-        print("Exception occurred while reading the file")
+        logging.exception("Exception occurred while reading the file: %s", ex)
         raise ex
 
 
