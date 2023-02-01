@@ -3,6 +3,7 @@ from cookiecutter.main import cookiecutter
 
 import os
 import shutil
+import yaml
 
 
 TERMINATOR = "\x1b[0m"
@@ -15,13 +16,34 @@ def main():
     project_name = "{{ cookiecutter.project_name }}"
     project_slug = "{{ cookiecutter.project_slug }}"
 
-    resource_name = "{{cookiecutter.resource_name}}"
-    resources = ["user", "customer", "order"]
+    read_from_file = {{ cookiecutter._read_from_file }}
+
+    resources_name = "{{ cookiecutter.resource_name }}"
+
+    yaml_file = "../hid-project-generator/config.yaml"
+
+    try:
+        if read_from_file is True:
+            with open(yaml_file, 'r') as stream:
+                output = yaml.safe_load(stream)
+                resources_name = output['resource_name']
+        else:
+            resources_name = resources_name.split(" ")
+    except FileNotFoundError as ex:
+        print("File not found")
+        raise ex
+    except yaml.YAMLError as ex:
+        print("Error Reading file", yaml_file)
+        raise ex
+    except Exception as ex:
+        print("Exception occurred while reading the file")
+        raise ex
+
 
     templates_repo = "{{ cookiecutter._templates_repo }}"
     template_dir = os.path.join("templates")
 
-    for resource in resources :
+    for resource in resources_name :
         cookiecutter(   templates_repo,
                         directory=template_dir,
                         no_input=True,

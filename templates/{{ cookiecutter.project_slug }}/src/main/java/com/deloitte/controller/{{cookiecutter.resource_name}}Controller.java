@@ -1,4 +1,4 @@
-package com.deloitte.controllers;
+package com.deloitte.controller;
 
 import com.deloitte.domain.{{cookiecutter.resource_name}};
 import com.deloitte.service.{{cookiecutter.resource_name}}Service;
