@@ -2,7 +2,6 @@ from __future__ import print_function
 from cookiecutter.main import cookiecutter
 
 import os
-import shutil
 import yaml
 import logging
 
@@ -40,6 +39,9 @@ def main():
     yaml_file = "../hid-project-generator/config.yaml"
 
     setapplicationproperties("{{cookiecutter.db}}", "{{cookiecutter._templates_repo}}", app_folder)
+    dependency = {{ cookiecutter._dependency }}
+
+    dependency_repo = {{ cookiecutter._dependency_repo }}
 
     try:
         if read_from_file is True:
@@ -72,7 +74,9 @@ def main():
                                         "project_name": project_name,
                                         "_pkg_name": _pkg_name,
                                         "group_name": group_name,
-                                        "resource_name": resource.title()
+                                        "resource_name": resource.title(),
+                                        "resource_name": resource.capitalize(),
+                                        "_dependency": dependency
                                       }
                     )
 
