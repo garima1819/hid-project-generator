@@ -1,4 +1,4 @@
-package com.deloitte.{{cookiecutter._pkg_name}};.controllers;
+package com.deloitte.{{cookiecutter._pkg_name}}.controller;
 
 import com.deloitte.{{cookiecutter._pkg_name}}.domain.{{cookiecutter.resource_name}};
 import com.deloitte.{{cookiecutter._pkg_name}}.service.{{cookiecutter.resource_name}}Service;
@@ -17,7 +17,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.deloitte.{{cookiecutter._pkg_name}}.util.TestUtil.create{{{cookiecutter.resource_name}};
+import static com.deloitte.{{cookiecutter._pkg_name}}.util.{{cookiecutter.resource_name}}TestUtil.create{{cookiecutter.resource_name}};
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -92,7 +92,7 @@ class {{cookiecutter.resource_name}}ControllerTest {
     @Test
     void save{{cookiecutter.resource_name}}TestSuccess() throws Exception {
         when({{cookiecutter.resource_name|lower}}Service.save{{cookiecutter.resource_name}}(any({{cookiecutter.resource_name}}.class)))
-        .thenReturn(customer);
+        .thenReturn({{cookiecutter.resource_name|lower}});
 
         mockMvc.perform(post("/{{cookiecutter.resource_name|lower}}")
         .contentType(MediaType.APPLICATION_JSON)
@@ -118,7 +118,7 @@ class {{cookiecutter.resource_name}}ControllerTest {
     @Test
     public void delete{{cookiecutter.resource_name}}Test() throws Exception {
         doNothing()
-                .when(customerService).delete{{cookiecutter.resource_name}}ById(any(Long.class));
+                .when({{cookiecutter.resource_name|lower}}Service).delete{{cookiecutter.resource_name}}ById(any(Long.class));
         mockMvc.perform(get("/{{cookiecutter.resource_name|lower}}/{id}",1L))
         .andExpectAll(status().isOk());
     }
