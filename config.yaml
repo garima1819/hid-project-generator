@@ -1,0 +1,11 @@
+default_context:
+  project_name: "ProjectGenerator"
+  project_slug: "ProjectGeneratorSlug"
+  _read_from_file: true
+
+#replay_dir: "/Users/ankitkumar29/Downloads/cookiecutter-project/MyPackage/hid-project-generator"
+
+resource_name:
+  - User
+  - Customer
+  - Order
