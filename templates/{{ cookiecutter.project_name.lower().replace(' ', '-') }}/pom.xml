@@ -30,17 +30,15 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>3.0.2</version>
         </dependency>
-        {% for dependency_version in cookiecutter._dependency -%}
-            {% for dependency in cookiecutter._dependency[dependency_version] %}
+        {% for dependency in cookiecutter._dependency %}
         <dependency>
-            <groupId>{{ cookiecutter._dependency_repo[dependency_version|string][dependency|string][0] }}</groupId>
-            <artifactId>{{ cookiecutter._dependency_repo[dependency_version|string][dependency|string][1] }}</artifactId>
-            <version>{{ cookiecutter._dependency_repo[dependency_version|string][dependency|string][2] }}</version>
-            {% if cookiecutter._dependency_repo[dependency_version|string][dependency|string]|length > 3 %}
-            <scope>{{ cookiecutter._dependency_repo[dependency_version|string][dependency|string][3] }}</scope>
+            <groupId>{{ cookiecutter._dependency_repo[cookiecutter.version|string][dependency|string][0] }}</groupId>
+            <artifactId>{{ cookiecutter._dependency_repo[cookiecutter.version|string][dependency|string][1] }}</artifactId>
+            <version>{{ cookiecutter._dependency_repo[cookiecutter.version|string][dependency|string][2] }}</version>
+            {% if cookiecutter._dependency_repo[cookiecutter.version|string][dependency|string]|length > 3 %}
+            <scope>{{ cookiecutter._dependency_repo[cookiecutter.version|string][dependency|string][3] }}</scope>
             {% endif %}
         </dependency>
-            {% endfor %}
         {% endfor -%}
     </dependencies>
 

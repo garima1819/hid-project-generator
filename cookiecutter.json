@@ -10,9 +10,7 @@
     "version": [2.7, 3.1],
     "_read_from_file": false,
     "_templates_repo": "/Users/ankitkumar29/Downloads/cookiecutter-project/MyPackage/hid-project-generator",
-    "_dependency":{
-        "{{ cookiecutter.version }}": "[]"
-    },
+    "_dependency":"MyDependency",
     "_dependency_repo": {
         "2.7": {
             "h2": ["org.projectlombok","lombok","1.18,24"],
