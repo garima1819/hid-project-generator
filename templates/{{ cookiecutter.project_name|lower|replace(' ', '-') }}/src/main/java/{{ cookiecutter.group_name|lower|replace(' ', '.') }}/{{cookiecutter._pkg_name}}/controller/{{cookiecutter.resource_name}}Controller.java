@@ -1,7 +1,7 @@
-package com.deloitte.controller;
+package com.deloitte.{{cookiecutter._pkg_name}}.controller;
 
-import com.deloitte.domain.{{cookiecutter.resource_name}};
-import com.deloitte.service.{{cookiecutter.resource_name}}Service;
+import com.deloitte.{{cookiecutter._pkg_name}}.domain.{{cookiecutter.resource_name}};
+import com.deloitte.{{cookiecutter._pkg_name}}.service.{{cookiecutter.resource_name}}Service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

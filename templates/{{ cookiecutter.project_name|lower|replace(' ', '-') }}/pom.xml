@@ -1,16 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.deloitte</groupId>
-    <artifactId>{{cookiecutter.project_slug}}</artifactId>
+
+    <groupId>{{ cookiecutter.group_name|lower|replace(' ', '.') }}</groupId>
+    <artifactId>{{ cookiecutter.project_name|lower|replace(' ', '-') }}</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <name>{{cookiecutter.project_slug}} Created from hid template.</name>
-    <properties>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <spring.version>5.2.0.RELEASE</spring.version>
-    </properties>
+    <description>{{ cookiecutter.project_name|lower|replace(' ', '-') }} Created from hid-project-generator.</description>
+    <name>{{ cookiecutter.project_name|lower|replace(' ', '-') }}</name>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -40,4 +38,11 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
+
+    <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <spring.version>5.2.0.RELEASE</spring.version>
+    </properties>
+
 </project>
