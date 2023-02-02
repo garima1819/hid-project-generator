@@ -1,5 +1,6 @@
 from __future__ import print_function
 from cookiecutter.main import cookiecutter
+from collections import OrderedDict
 
 import os
 import shutil
@@ -22,6 +23,11 @@ def main():
     resources_name = "{{ cookiecutter.resource_name }}"
 
     yaml_file = "../hid-project-generator/config.yaml"
+
+    dependency = {{ cookiecutter._dependency }}
+
+    dependency_repo = {{ cookiecutter._dependency_repo }}
+    print(dependency_repo)
 
     try:
         if read_from_file is True:
@@ -53,7 +59,8 @@ def main():
                         extra_context={
                                         "project_name": project_name,
                                         "project_slug": project_slug,
-                                        "resource_name": resource.capitalize()
+                                        "resource_name": resource.capitalize(),
+                                        "_dependency": dependency
                                       }
                     )
 

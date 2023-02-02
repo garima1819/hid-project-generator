@@ -2,6 +2,16 @@
     "project_name": "MyProject",
     "project_slug": "{{ cookiecutter.project_name.replace('_', ' ').title().replace(' ', '') }}",
     "resource_name": "MyResource",
+    "version": [2.7, 3.1],
     "_read_from_file": false,
-    "_templates_repo": "/Users/krishnakumar9/IdeaProjects/hid-project-generator"
+    "_templates_repo": "/Users/ankitkumar29/Downloads/cookiecutter-project/MyPackage/hid-project-generator",
+    "_dependency":{
+        "{{ cookiecutter.version }}": "[]"
+    },
+    "_dependency_repo": {
+        "2.7": {
+            "h2": ["org.projectlombok","lombok","1.18,24"],
+            "lombok": ["com.h2database","h2","2.1.214"]
+        }
+    }
 }

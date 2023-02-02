@@ -2,5 +2,15 @@
     "project_name": "MyProject",
     "project_slug": "{{ cookiecutter.project_name.replace('_', ' ').title().replace(' ', '') }}",
     "resource_name": "MyResource",
-    "_read_from_file": false
+    "version": [2.7, 3.1],
+    "_read_from_file": false,
+    "_dependency":{
+        "{{ cookiecutter.version }}": "[]"
+    },
+    "_dependency_repo": {
+        "2.7": {
+            "h2": ["org.projectlombok","lombok","1.18.24"],
+            "lombok": ["com.h2database","h2","2.1.214"]
+        }
+    }
 }

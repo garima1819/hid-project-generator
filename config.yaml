@@ -2,6 +2,11 @@ default_context:
   project_name: "ProjectGenerator"
   project_slug: "ProjectGeneratorSlug"
   _read_from_file: true
+  version: 2.7
+  _dependency:
+    2.7:
+      - h2
+      - lombok
 
 #replay_dir: "/Users/ankitkumar29/Downloads/cookiecutter-project/MyPackage/hid-project-generator"
 
