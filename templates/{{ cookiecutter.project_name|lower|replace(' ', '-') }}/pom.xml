@@ -11,8 +11,13 @@
     <artifactId>{{ cookiecutter.project_name|lower|replace(' ', '-') }}</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <description>{{ cookiecutter.project_name|lower|replace(' ', '-') }} Created from hid-project-generator.</description>
+    <description>{{ cookiecutter.project_name|lower|replace(' ', '-') }} Created from hid-project-generator.
+    </description>
     <name>{{ cookiecutter.project_name|lower|replace(' ', '-') }}</name>
+
+    <properties>
+        <java.version>8</java.version>
+    </properties>
 
     <dependencies>
         <dependency>

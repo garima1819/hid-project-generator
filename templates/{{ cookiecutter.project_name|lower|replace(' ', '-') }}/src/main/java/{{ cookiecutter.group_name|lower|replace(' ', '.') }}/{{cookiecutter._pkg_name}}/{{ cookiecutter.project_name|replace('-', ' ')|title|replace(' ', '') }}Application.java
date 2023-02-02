@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @Slf4j
 @SpringBootApplication
-public class {{ cookiecutter.project_name|replace('-', ' ')|title|replace(' ', '') }}Application.javaApplication {
+public class {{ cookiecutter.project_name|replace('-', ' ')|title|replace(' ', '') }}Application {
 
 
 	public static void main(String[] args) {
