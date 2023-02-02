@@ -2,7 +2,6 @@ from __future__ import print_function
 from cookiecutter.main import cookiecutter
 
 import os
-import shutil
 import yaml
 import logging
 
@@ -81,6 +80,9 @@ def main():
                                         "project_name": project_name,
                                         "_pkg_name": _pkg_name,
                                         "group_name": group_name,
+                                        "resource_name": resource.title(),
+                                        "resource_name": resource.capitalize(),
+                                        "_dependency": dependency
                                         "resource_name": resource.title()
                                         "project_slug": project_slug,
                                         "resource_name": resource.capitalize(),
