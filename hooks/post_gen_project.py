@@ -27,7 +27,6 @@ def main():
     dependency = {{ cookiecutter._dependency }}
 
     dependency_repo = {{ cookiecutter._dependency_repo }}
-    print(dependency_repo)
 
     try:
         if read_from_file is True:
