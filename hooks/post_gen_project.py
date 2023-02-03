@@ -17,16 +17,12 @@ def main():
 
     project_name = "{{ cookiecutter.project_name }}"
     project_slug = "{{ cookiecutter.project_slug }}"
-
     read_from_file = {{ cookiecutter._read_from_file }}
-
     resources_name = "{{ cookiecutter.resource_name }}"
-
     yaml_file = "../hid-project-generator/config.yaml"
-
     dependency = {{ cookiecutter._dependency }}
-
-    dependency_repo = {{ cookiecutter._dependency_repo }}
+    spring_version = "{{ cookiecutter.spring_version }}"
+    java_version = {{ cookiecutter.java_version }}
 
     try:
         if read_from_file is True:
@@ -59,7 +55,9 @@ def main():
                                         "project_name": project_name,
                                         "project_slug": project_slug,
                                         "resource_name": resource.capitalize(),
-                                        "_dependency": dependency
+                                        "_dependency": dependency,
+                                        "spring_version": spring_version,
+                                        "java_version": java_version
                                       }
                     )
 
