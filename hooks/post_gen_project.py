@@ -14,17 +14,24 @@ SUCCESS = "\x1b[1;32m [SUCCESS]: "
 HINT = "\x1b[3;33m"
 
 def main():
+    yaml_file = "../hid-project-generator/config.yaml"
+    dependency_yaml_file = "../hid-project-generator/dependency.yaml"
 
     project_name = "{{ cookiecutter.project_name }}"
     project_slug = "{{ cookiecutter.project_slug }}"
     read_from_file = {{ cookiecutter._read_from_file }}
     resources_name = "{{ cookiecutter.resource_name }}"
-    yaml_file = "../hid-project-generator/config.yaml"
+
     dependency = {{ cookiecutter._dependency }}
     spring_version = "{{ cookiecutter.spring_version }}"
     java_version = {{ cookiecutter.java_version }}
+    dependency_repo = {{ cookiecutter._dependency_repo }}
 
     try:
+        with open(dependency_yaml_file, 'r') as dependency_stream:
+            output = yaml.safe_load(dependency_stream)
+            dependency_repo = output['dependency_repo']
+
         if read_from_file is True:
             with open(yaml_file, 'r') as stream:
                 output = yaml.safe_load(stream)
@@ -57,7 +64,8 @@ def main():
                                         "resource_name": resource.capitalize(),
                                         "_dependency": dependency,
                                         "spring_version": spring_version,
-                                        "java_version": java_version
+                                        "java_version": java_version,
+                                        "_dependency_repo": dependency_repo
                                       }
                     )
 
