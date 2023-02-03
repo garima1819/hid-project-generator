@@ -38,6 +38,7 @@ def main():
     setapplicationproperties("{{cookiecutter.db}}", "{{cookiecutter._templates_repo}}", app_folder)
     read_from_file = {{ cookiecutter._read_from_file }}
     resources_name = "{{ cookiecutter.resource_name }}"
+
     app_folder = "{{cookiecutter._templates_repo}}"+"{{cookiecutter._copy_without_render}}"+"/src/main/resources/application.properties"
 
     yaml_file = "../hid-project-generator/config.yaml"
@@ -89,9 +90,8 @@ def main():
                                         "resource_name": resource.capitalize(),
                                         "_dependency": dependency,
                                         "spring_version": spring_version,
-                                        "java_version": java_version
-                                        "_dependency": dependency
-                                        "resource_name": resource.title()
+                                        "java_version": java_version,
+                                        "resource_name": resource.title(),
                                         "project_slug": project_slug,
                                         "resource_name": resource.capitalize(),
                                         "_dependency": dependency,
