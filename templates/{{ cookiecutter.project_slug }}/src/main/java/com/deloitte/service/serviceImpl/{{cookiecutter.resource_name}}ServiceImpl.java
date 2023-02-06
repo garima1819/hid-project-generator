@@ -27,13 +27,15 @@ public class {{cookiecutter.resource_name}}ServiceImpl implements {{cookiecutter
     @Override
     public {{cookiecutter.resource_name}} update{{cookiecutter.resource_name}}(Long id, {{cookiecutter.resource_name}} {{cookiecutter.resource_name|lower}}) {
         {{cookiecutter.resource_name}} {{cookiecutter.resource_name|lower}}Obj = {{cookiecutter.resource_name|lower}}Repository.findById(id)
-                                       .orElseThrow(() -> new ResourceNotFoundException("{{cookiecutter.resource_name}} Not Found"));;
+                                       .orElseThrow(() -> new ResourceNotFoundException("{{cookiecutter.resource_name}} Not Found"));
         //update the required fields
         return {{cookiecutter.resource_name|lower}}Repository.save({{cookiecutter.resource_name|lower}}Obj);
     }
 
     @Override
     public void delete{{cookiecutter.resource_name}}ById(Long id) {
+        {{cookiecutter.resource_name|lower}}Repository.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("{{cookiecutter.resource_name}} Not Found"));
         {{cookiecutter.resource_name|lower}}Repository.deleteById(id);
     }
 
