@@ -1,0 +1,2 @@
+mongo.username = abc
+mongo.password = pass

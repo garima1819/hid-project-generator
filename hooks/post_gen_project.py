@@ -12,6 +12,22 @@ INFO = "\x1b[1;33m [INFO]: "
 SUCCESS = "\x1b[1;32m [SUCCESS]: "
 HINT = "\x1b[3;33m"
 
+def setapplicationproperties(db, repo, app_folder):
+
+    if db == 'sql':
+        with open(repo+"sql.txt", "r") as sql, open(app_folder,"a") as appFile:
+            appFile.truncate(0)
+            for line in sql:
+                appFile.write(line)
+        sql.close()
+    elif db == 'mongo':
+        with open(repo+"mongoDb.txt", "r") as mongo, open(app_folder,"a") as appFile:
+            appFile.truncate(0)
+            for line in mongo:
+                appFile.write(line)
+        mongo.close()
+    appFile.close()
+
 def main():
 
     project_name = "{{- cookiecutter.project_name|trim|lower|replace(' ', '-') -}}"
@@ -19,8 +35,11 @@ def main():
     group_name = "{{ cookiecutter.group_name|lower|replace(' ', '.') }}"
     read_from_file = {{ cookiecutter._read_from_file }}
     resources_name = "{{ cookiecutter.resource_name }}"
+    app_folder = "{{cookiecutter._templates_repo}}"+"{{cookiecutter._copy_without_render}}"+"/src/main/resources/application.properties"
 
     yaml_file = "../hid-project-generator/config.yaml"
+
+    setapplicationproperties("{{cookiecutter.db}}", "{{cookiecutter._templates_repo}}", app_folder)
 
     try:
         if read_from_file is True:

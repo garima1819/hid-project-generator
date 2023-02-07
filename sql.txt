@@ -1,0 +1,2 @@
+sql.username = abc
+sql.password = pass
