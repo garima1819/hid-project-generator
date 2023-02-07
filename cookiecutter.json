@@ -6,6 +6,9 @@
     "spring_version": ["2.7.8", "3.0.2"],
     "java_version": [8,11,17,19],
     "_read_from_file": false,
+    "_templates_repo": "C:/Users/gariaggarwal/Documents/cookiecutter/Templates/vivekHid/hid-project-generator/",
+    "_copy_without_render": "/templates/{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "db": ["sql","mongo"]
     "_templates_repo": "/Users/ankitkumar29/Downloads/cookiecutter-project/MyPackage/hid-project-generator",
     "_dependency":"MyDependency",
     "_dependency_repo": {}
