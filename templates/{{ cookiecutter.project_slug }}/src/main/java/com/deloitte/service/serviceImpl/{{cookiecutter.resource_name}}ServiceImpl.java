@@ -8,9 +8,12 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
+
+@Slf4j
 @Service
 public class {{cookiecutter.resource_name}}ServiceImpl implements {{cookiecutter.resource_name}}Service {
 
