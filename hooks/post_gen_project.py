@@ -1,5 +1,6 @@
 from __future__ import print_function
 from cookiecutter.main import cookiecutter
+from collections import OrderedDict
 
 import os
 import yaml
@@ -14,13 +15,13 @@ HINT = "\x1b[3;33m"
 def setapplicationproperties(db, repo, app_folder):
 
     if db == 'sql':
-        with open(repo+"sql.txt", "r") as sql, open(app_folder,"a") as appFile:
+        with open(repo+"/sql.txt", "r") as sql, open(app_folder,"a") as appFile:
             appFile.truncate(0)
             for line in sql:
                 appFile.write(line)
         sql.close()
     elif db == 'mongo':
-        with open(repo+"mongoDb.txt", "r") as mongo, open(app_folder,"a") as appFile:
+        with open(repo+"/mongoDb.txt", "r") as mongo, open(app_folder,"a") as appFile:
             appFile.truncate(0)
             for line in mongo:
                 appFile.write(line)
