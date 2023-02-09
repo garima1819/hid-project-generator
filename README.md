@@ -2,6 +2,8 @@
 
 ### Running Project through user defined config file
 
+Update the '_templates_repo' with the relevant project repo
+
 Use the below command inorder to run:
 
 `cookiecutter --no-input --config-file <config file path> <project-name>`
