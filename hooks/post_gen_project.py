@@ -13,20 +13,30 @@ SUCCESS = "\x1b[1;32m [SUCCESS]: "
 HINT = "\x1b[3;33m"
 
 def setapplicationproperties(db, repo, app_folder):
+    with open(app_folder,"a") as appFile:
+        appFile.truncate(0)
 
-    if db == 'sql':
-        with open(repo+"/sql.txt", "r") as sql, open(app_folder,"a") as appFile:
-            appFile.truncate(0)
-            for line in sql:
-                appFile.write(line)
-        sql.close()
-    elif db == 'mongo':
-        with open(repo+"/mongoDb.txt", "r") as mongo, open(app_folder,"a") as appFile:
-            appFile.truncate(0)
-            for line in mongo:
-                appFile.write(line)
-        mongo.close()
-    appFile.close()
+        if db == 'mysql':
+            with open(repo+"/mysqlDb.txt", "r") as sql:
+                for line in sql:
+                    appFile.write(line)
+            sql.close()
+        elif db == 'mongoDb':
+            with open(repo+"/mongoDb.txt", "r") as mongo:
+                for line in mongo:
+                    appFile.write(line)
+            mongo.close()
+        elif db == 'postgreSql':
+            with open(repo+"/postgresDb.txt", "r") as postgres:
+                for line in postgres:
+                    appFile.write(line)
+            postgres.close()
+        elif db == 'oracleDb':
+            with open(repo+"/oracleDb.txt", "r") as oracle:
+                for line in oracle:
+                    appFile.write(line)
+            oracle.close()
+        appFile.close()
 
 def main():
     yaml_file = "../hid-project-generator/config.yaml"
