@@ -1,7 +1,14 @@
 {
     "project_name": "MyProject",
-    "project_slug": "{{ cookiecutter.project_name.replace('_', ' ').title().replace(' ', '') }}",
     "resource_name": "MyResource",
+    "group_name": "com.deloitte",
+    "_pkg_name": "{{ cookiecutter.project_name|lower|replace(' ', '') }}",
+    "_copy_without_render": "/templates/{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "db": ["mysql","mongoDb", "postgreSql", "oracleDb"],
+    "spring_version": ["2.7.8", "3.0.2"],
+    "java_version": [8,11,17,19],
     "_read_from_file": false,
-    "_templates_repo": "/Users/krishnakumar9/IdeaProjects/hid-project-generator"
+    "_templates_repo": "/Users/ankitkumar29/Downloads/cookiecutter-project/MyPackage/hid-project-generator",
+    "_dependency":"MyDependency",
+    "_dependency_repo": {}
 }
