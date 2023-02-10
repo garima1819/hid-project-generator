@@ -1,5 +1,6 @@
 from __future__ import print_function
 from cookiecutter.main import cookiecutter
+from collections import OrderedDict
 
 import os
 import yaml
