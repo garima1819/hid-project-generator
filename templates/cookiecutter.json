@@ -1,6 +1,12 @@
 {
     "project_name": "MyProject",
-    "project_slug": "{{ cookiecutter.project_name.replace('_', ' ').title().replace(' ', '') }}",
     "resource_name": "MyResource",
+    "group_name": "com.deloitte",
+    "_pkg_name": "{{ cookiecutter.project_name|lower|replace(' ', '') }}",
     "_read_from_file": false
+    "spring_version": ["2.7.8", "3.0.2"],
+    "java_version": [8,11,17,19],
+    "_read_from_file": false,
+    "_dependency":"MyDependency",
+    "_dependency_repo": {}
 }

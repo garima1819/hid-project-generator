@@ -1,9 +1,17 @@
 default_context:
   project_name: "ProjectGenerator"
-  project_slug: "ProjectGeneratorSlug"
+  _pkg_name: "{{ cookiecutter.project_name|lower|replace(' ', '') }}"
   _read_from_file: true
+  spring_version: "2.7.8"
+  java_version: 19
+  db: mysql
+  _dependency:
+    - h2
+    - lombok
+    - spring-web
+    - jpa
+    - persistence
 
-#replay_dir: "/Users/ankitkumar29/Downloads/cookiecutter-project/MyPackage/hid-project-generator"
 
 resource_name:
   - User

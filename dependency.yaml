@@ -1,0 +1,6 @@
+dependency_repo:
+  h2: ["org.projectlombok","lombok", "compile"]
+  lombok: ["com.h2database","h2"]
+  persistence: ["javax.persistence", "javax.persistence-api"]
+  spring-web: ["org.springframework.boot", "spring-boot-starter-web"]
+  jpa: ["org.springframework.boot", "spring-boot-starter-data-jpa"]
