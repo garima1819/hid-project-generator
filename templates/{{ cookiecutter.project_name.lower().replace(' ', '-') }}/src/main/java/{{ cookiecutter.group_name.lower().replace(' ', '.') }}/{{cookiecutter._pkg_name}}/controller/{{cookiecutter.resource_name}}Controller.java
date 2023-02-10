@@ -17,9 +17,9 @@ public class {{cookiecutter.resource_name}}Controller {
     @Autowired
     private {{cookiecutter.resource_name}}Service {{cookiecutter.resource_name|lower}}Service;
 
-    @GetMapping("/{{cookiecutter.resource_name|lower}}s")
-    public List<{{cookiecutter.resource_name}}> get{{cookiecutter.resource_name}}s() {
-        return {{cookiecutter.resource_name|lower}}Service.get{{cookiecutter.resource_name}}s();
+    @GetMapping("/{{cookiecutter.resource_name|lower}}")
+    public List<{{cookiecutter.resource_name}}> get{{cookiecutter.resource_name}}() {
+        return {{cookiecutter.resource_name|lower}}Service.get{{cookiecutter.resource_name}}();
     }
 
     @GetMapping("/{{cookiecutter.resource_name|lower}}/{id}")

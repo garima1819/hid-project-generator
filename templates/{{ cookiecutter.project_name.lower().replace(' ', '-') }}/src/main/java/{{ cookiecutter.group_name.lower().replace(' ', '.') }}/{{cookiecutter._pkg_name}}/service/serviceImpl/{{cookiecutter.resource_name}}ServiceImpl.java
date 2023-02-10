@@ -39,7 +39,7 @@ public class {{cookiecutter.resource_name}}ServiceImpl implements {{cookiecutter
     }
 
     @Override
-    public List<{{cookiecutter.resource_name}}>get{{cookiecutter.resource_name}}s() {
+    public List<{{cookiecutter.resource_name}}>get{{cookiecutter.resource_name}}() {
         return {{cookiecutter.resource_name|lower}}Repository.findAll();
     }
 

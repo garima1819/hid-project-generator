@@ -9,7 +9,7 @@
     </parent>
     <groupId>{{ cookiecutter.group_name|lower|replace(' ', '.') }}</groupId>
     <artifactId>{{ cookiecutter.project_name|lower|replace(' ', '-') }}</artifactId>
-    <version>1.0</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>{{ cookiecutter.project_name|lower|replace(' ', '-') }} Created from hid-project-generator</description>
     <name>{{ cookiecutter.project_name|lower|replace(' ', '-') }}</name>
