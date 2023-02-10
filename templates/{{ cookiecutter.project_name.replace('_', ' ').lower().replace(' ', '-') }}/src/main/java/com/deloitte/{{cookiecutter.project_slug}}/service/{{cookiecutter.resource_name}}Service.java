@@ -1,6 +1,6 @@
-package com.deloitte.service;
+package com.deloitte.{{cookiecutter.project_slug}}.service;
 
-import com.deloitte.domain.{{cookiecutter.resource_name}};
+import com.deloitte.{{cookiecutter.project_slug}}.domain.{{cookiecutter.resource_name}};
 import java.util.List;
 
 public interface {{cookiecutter.resource_name}}Service {
