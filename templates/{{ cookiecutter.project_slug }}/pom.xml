@@ -30,9 +30,9 @@
         <dependency>
             <groupId>{{ cookiecutter._dependency_repo[dependency|string][0] }}</groupId>
             <artifactId>{{ cookiecutter._dependency_repo[dependency|string][1] }}</artifactId>
-            {% if cookiecutter._dependency_repo[dependency|string]|length > 2 %}<scope>{{ cookiecutter._dependency_repo[dependency|string][2] }}</scope>{% endif %}
+            {%- if cookiecutter._dependency_repo[dependency|string]|length > 2 %}<scope>{{ cookiecutter._dependency_repo[dependency|string][2] }}</scope>{%- endif %}
         </dependency>
-        {% endfor -%}
+        {% endfor %}
     </dependencies>
 </project>
 
