@@ -61,10 +61,7 @@ def main():
             dependency_repo = output['dependency_repo']
 
         if read_from_file is True:
-            with open(yaml_file, 'r') as stream:
-                output = yaml.safe_load(stream)
-                resources_name = output['resource_name']
-
+            resources_name = {{ cookiecutter._resources }}
             dependency = {{ cookiecutter._dependency }}
         else:
             resources_name = resources_name.split(" ")

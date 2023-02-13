@@ -8,5 +8,6 @@
     "dependency": ["spring-web", "h2", "lombok", "persistence", "jdbc", "jpa"],
     "_read_from_file": false,
     "_dependency":{},
-    "_dependency_repo": {}
+    "_dependency_repo": {},
+    "_resources": {}
 }
