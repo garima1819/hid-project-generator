@@ -62,7 +62,7 @@ class {{cookiecutter.resource_name}}ServiceImplTest {
     }
 
     @Test
-    void get{{cookiecutter.resource_name}}s() {
+    void get{{cookiecutter.resource_name}}() {
 
         List<{{cookiecutter.resource_name}}> {{cookiecutter.resource_name|lower}}List = new ArrayList<>();
         {{cookiecutter.resource_name}} {{cookiecutter.resource_name|lower}}1 = create{{cookiecutter.resource_name}}(1L,"name1");
@@ -72,9 +72,9 @@ class {{cookiecutter.resource_name}}ServiceImplTest {
 
         Mockito.when({{cookiecutter.resource_name|lower}}Repository.findAll()).thenReturn({{cookiecutter.resource_name|lower}}List);
 
-        List<{{cookiecutter.resource_name}}> {{cookiecutter.resource_name|lower}}s = {{cookiecutter.resource_name|lower}}Service.get{{cookiecutter.resource_name}}s();
+        List<{{cookiecutter.resource_name}}> {{cookiecutter.resource_name|lower}} = {{cookiecutter.resource_name|lower}}Service.get{{cookiecutter.resource_name}}();
 
-        Assertions.assertEquals({{cookiecutter.resource_name|lower}}List.size(),{{cookiecutter.resource_name|lower}}s.size());
+        Assertions.assertEquals({{cookiecutter.resource_name|lower}}List.size(),{{cookiecutter.resource_name|lower}}.size());
 
     }
 
