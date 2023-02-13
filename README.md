@@ -1,8 +1,8 @@
 # HidCookieCutter
 
-### Running Project through user defined config file
-
 Update the '_templates_repo' with the relevant project repo
+
+### Running Project through user defined config file
 
 Use the below command inorder to run:
 
