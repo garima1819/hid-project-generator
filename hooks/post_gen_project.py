@@ -50,7 +50,7 @@ def main():
     read_from_file = {{ cookiecutter._read_from_file }}
     resources_name = "{{ cookiecutter.resource_name }}"
 
-    dependency = {{ cookiecutter._dependency }}
+    dependency = "{{ cookiecutter.dependency }}"
     spring_version = "{{ cookiecutter.spring_version }}"
     java_version = {{ cookiecutter.java_version }}
     dependency_repo = {{ cookiecutter._dependency_repo }}
@@ -64,8 +64,11 @@ def main():
             with open(yaml_file, 'r') as stream:
                 output = yaml.safe_load(stream)
                 resources_name = output['resource_name']
+
+            dependency = {{ cookiecutter._dependency }}
         else:
             resources_name = resources_name.split(" ")
+            dependency = dependency.split(" ")
     except FileNotFoundError as ex:
         logging.exception("File not found: %s", ex)
         raise ex
