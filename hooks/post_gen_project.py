@@ -109,5 +109,10 @@ def main():
           "{}/README.md contains instructions on how to proceed.".
           format(_pkg_name) + TERMINATOR)
 
+    # remove everything from application.properties file
+    with open(app_folder,"a") as appFile:
+        appFile.truncate(0)
+        appFile.close()
+
 if __name__ == '__main__':
     main()
