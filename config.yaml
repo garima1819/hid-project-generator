@@ -11,9 +11,10 @@ default_context:
     - spring-web
     - jpa
     - persistence
+    - jdbc
+  _resources:
+    - Users
+    - Customers
+    - Orders
 
 
-resource_name:
-  - User
-  - Customer
-  - Order

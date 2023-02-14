@@ -9,6 +9,7 @@
     "java_version": [8,11,17,19],
     "_read_from_file": false,
     "_templates_repo": "/Users/ankitkumar29/Downloads/cookiecutter-project/MyPackage/hid-project-generator",
-    "_dependency":"MyDependency",
-    "_dependency_repo": {}
+    "_dependency":{},
+    "_dependency_repo": {},
+    "_resources": {}
 }

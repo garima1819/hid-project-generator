@@ -9,7 +9,7 @@
     </parent>
     <groupId>{{ cookiecutter.group_name|lower|replace(' ', '.') }}</groupId>
     <artifactId>{{ cookiecutter.project_name|lower|replace(' ', '-') }}</artifactId>
-    <version>1.0</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>{{ cookiecutter.project_name|lower|replace(' ', '-') }} Created from hid-project-generator</description>
     <name>{{ cookiecutter.project_name|lower|replace(' ', '-') }}</name>
@@ -29,6 +29,34 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        {%- if cookiecutter._read_from_file is not true %}
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        {%- endif %}
         {% for dependency in cookiecutter._dependency %}
         <dependency>
             <groupId>{{ cookiecutter._dependency_repo[dependency|string][0] }}</groupId>

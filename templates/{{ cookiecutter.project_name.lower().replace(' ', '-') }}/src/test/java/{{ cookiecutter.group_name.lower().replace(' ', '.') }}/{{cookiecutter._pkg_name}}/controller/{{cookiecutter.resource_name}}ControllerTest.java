@@ -65,12 +65,12 @@ class {{cookiecutter.resource_name}}ControllerTest {
 //    }
 
     @Test
-    public void get{{cookiecutter.resource_name}}sTest() throws Exception {
+    public void get{{cookiecutter.resource_name}}Test() throws Exception {
 
-        when({{cookiecutter.resource_name|lower}}Service.get{{cookiecutter.resource_name}}s())
+        when({{cookiecutter.resource_name|lower}}Service.get{{cookiecutter.resource_name}}())
         .thenReturn({{cookiecutter.resource_name|lower}}List);
 
-        mockMvc.perform(get("/{{cookiecutter.resource_name|lower}}s"))
+        mockMvc.perform(get("/{{cookiecutter.resource_name|lower}}"))
                 .andExpect(status().isOk());
 
         Assertions.assertEquals(2,{{cookiecutter.resource_name|lower}}List.size());
