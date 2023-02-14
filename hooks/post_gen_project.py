@@ -50,7 +50,7 @@ def main():
     read_from_file = {{ cookiecutter._read_from_file }}
     resources_name = "{{ cookiecutter.resource_name }}"
 
-    dependency = "{{ cookiecutter.dependency }}"
+    dependency = []
     spring_version = "{{ cookiecutter.spring_version }}"
     java_version = {{ cookiecutter.java_version }}
     dependency_repo = {{ cookiecutter._dependency_repo }}
@@ -65,7 +65,6 @@ def main():
             dependency = {{ cookiecutter._dependency }}
         else:
             resources_name = resources_name.split(" ")
-            dependency = dependency.split(" ")
     except FileNotFoundError as ex:
         logging.exception("File not found: %s", ex)
         raise ex
@@ -95,7 +94,8 @@ def main():
                                         "_dependency": dependency,
                                         "spring_version": spring_version,
                                         "java_version": java_version,
-                                        "_dependency_repo": dependency_repo
+                                        "_dependency_repo": dependency_repo,
+                                        "_read_from_file": read_from_file
                                       }
                     )
 
