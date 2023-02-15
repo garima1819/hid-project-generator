@@ -8,7 +8,7 @@
     "spring_version": ["2.7.8", "3.0.2"],
     "java_version": [8,11,17,19],
     "_read_from_file": false,
-    "_templates_repo": "https://github.com/garima1819/hid-project-generator.git",
+    "_templates_repo": "https://github.com/garima1819/hid-project-generator/tree/main",
     "_dependency":{},
     "_dependency_repo": {},
     "_resources": {}
