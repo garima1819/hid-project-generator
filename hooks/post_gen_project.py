@@ -12,31 +12,32 @@ INFO = "\x1b[1;33m [INFO]: "
 SUCCESS = "\x1b[1;32m [SUCCESS]: "
 HINT = "\x1b[3;33m"
 
-def setapplicationproperties(db, repo, app_folder):
-    with open(app_folder,"a") as appFile:
-        appFile.truncate(0)
-
-        if db == 'mysql':
-            with open(repo+"/mysqlDb.txt", "r") as sql:
-                for line in sql:
-                    appFile.write(line)
-            sql.close()
-        elif db == 'mongoDb':
-            with open(repo+"/mongoDb.txt", "r") as mongo:
-                for line in mongo:
-                    appFile.write(line)
-            mongo.close()
-        elif db == 'postgreSql':
-            with open(repo+"/postgresDb.txt", "r") as postgres:
-                for line in postgres:
-                    appFile.write(line)
-            postgres.close()
-        elif db == 'oracleDb':
-            with open(repo+"/oracleDb.txt", "r") as oracle:
-                for line in oracle:
-                    appFile.write(line)
-            oracle.close()
-        appFile.close()
+# def setapplicationproperties(db, repo, app_folder):
+#     with open("r"+app_folder,"a") as appFile:
+#
+#         appFile.truncate(0)
+#
+#         if db == 'mysql':
+#             with open(repo+"/mysqlDb.txt", "r") as sql:
+#                 for line in sql:
+#                     appFile.write(line)
+#             sql.close()
+#         elif db == 'mongoDb':
+#             with open(repo+"/mongoDb.txt", "r") as mongo:
+#                 for line in mongo:
+#                     appFile.write(line)
+#             mongo.close()
+#         elif db == 'postgreSql':
+#             with open(repo+"/postgresDb.txt", "r") as postgres:
+#                 for line in postgres:
+#                     appFile.write(line)
+#             postgres.close()
+#         elif db == 'oracleDb':
+#             with open(repo+"/oracleDb.txt", "r") as oracle:
+#                 for line in oracle:
+#                     appFile.write(line)
+#             oracle.close()
+#         appFile.close()
 
 def main():
     yaml_file = "../hid-project-generator/config.yaml"
@@ -46,7 +47,7 @@ def main():
     _pkg_name = "{{ cookiecutter.project_name|lower|replace(' ', '') }}"
     group_name = "{{ cookiecutter.group_name|lower|replace(' ', '.') }}"
     app_folder = "{{cookiecutter._templates_repo}}"+"{{cookiecutter._copy_without_render}}"+"/src/main/resources/application.properties"
-    setapplicationproperties("{{cookiecutter.db}}", "{{cookiecutter._templates_repo}}", app_folder)
+    # setapplicationproperties("{{cookiecutter.db}}", "{{cookiecutter._templates_repo}}", app_folder)
     read_from_file = {{ cookiecutter._read_from_file }}
     resources_name = "{{ cookiecutter.resource_name }}"
 
